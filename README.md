@@ -8,7 +8,7 @@ A method displayDetails() to print the student's details.
 Task:  Create two instances of the Student class with different details and display their information.
 
 Solution: 
-class Student {
+```class Student {
     private int id;
     private String name;
     private int age;
@@ -34,3 +34,4 @@ public class Main {
         student2.displayDetails();
     }
 }
+```
