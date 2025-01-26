@@ -1,4 +1,4 @@
-**Day 1: Problem Statement (Basic OOP)**
+**Day 1: Problem Statement-25/01/25 (Basic OOP)**
 ```
 Problem Statement:
 Write a Java program to create a class Student with the following attributes:   id, name, age
@@ -35,7 +35,7 @@ public class Main {
     }
 }
 ```
-**Day 2: Problem Statement (Basic OOP)**
+**Day 2: Problem Statement-26/01/25 (Basic OOP)**
 ```
 Problem Statement:
 Create a Java program that demonstrates encapsulation by creating a class BankAccount with the following private attributes:    accountNumber, accountHolderName, balance
