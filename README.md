@@ -35,7 +35,7 @@ public class Main {
     }
 }
 ```
-***Day 2: Problem Statement (Basic OOP)***
+**Day 2: Problem Statement (Basic OOP)**
 ```
 Problem Statement:
 Create a Java program that demonstrates encapsulation by creating a class BankAccount with the following private attributes:    accountNumber, accountHolderName, balance
