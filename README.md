@@ -149,8 +149,8 @@ public class Main {
     public static void main(String[] args) {
         Dog dog = new Dog("Buddy", "Golden Retriever");
         dog.displayDetails();
-        dog.eat();  // Inherited method
-        dog.bark(); // Child-specific method
+        dog.eat(); ]
+        dog.bark();
     }
 }
 ```
