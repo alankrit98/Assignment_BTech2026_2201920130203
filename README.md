@@ -105,3 +105,52 @@ public class Main {
     }
 }
 ```
+**Day 3: Problem Statement-27/01/2025 (Basic OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate inheritance by creating the following classes:
+Parent Class: Animal
+Attributes: name
+Methods:
+Constructor to initialize name.
+eat(): Prints a message that the animal is eating.
+Child Class: Dog (inherits from Animal)
+Attributes: breed
+Methods:
+Constructor to initialize name and breed.
+bark(): Prints a message that the dog is barking.
+Task:  Create an instance of the Dog class and demonstrate the use of inherited and child-specific methods.
+
+Solution:
+class Animal {
+    protected String name;
+    public Animal(String name) {
+        this.name = name;
+    }
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+class Dog extends Animal {
+    private String breed;
+    public Dog(String name, String breed) {
+        super(name); // Call the parent class constructor
+        this.breed = breed;
+    }
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Breed: " + breed);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy", "Golden Retriever");
+        dog.displayDetails();
+        dog.eat();  // Inherited method
+        dog.bark(); // Child-specific method
+    }
+}
+```
