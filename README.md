@@ -1,6 +1,6 @@
 
 
-# **Assignment_BTech2026_2201920130066**
+# **Assignment_BTech2026_2201920130203**
 
 ## **Overview**
 This repository contains daily solutions for the assignments as per the guidelines provided for the **B. Tech 2026 Passing Out Batch**. The solutions are categorized into three domains: **Data Structures and Algorithms (DSA)**, **Object-Oriented Programming (OOPS)**, and **Database Management Systems (DBMS)**. The solutions showcase core programming concepts such as efficient algorithm design, database queries and normalization, and Object-Oriented principles like inheritance, polymorphism, encapsulation, and abstraction.
