@@ -1,0 +1,1 @@
+**Here, We have providing the 1 Question of DBMS Solved Daily on HackerRank**
