@@ -20,8 +20,8 @@ Each day, the following problems are solved and updated in this repository:
 ---
 
 ## **Coding Platform Used**
-- **Platform:** (e.g., Leetcode, CodeForce, CodeChef)  
-- **Language:** Java  
+- **Platform:** (e.g., Leetcode, HackerRank)  
+- **Language:** Java, MySQL  
 
 ---
 
