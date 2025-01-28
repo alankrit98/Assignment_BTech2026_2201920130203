@@ -35,3 +35,179 @@ public class Main {
     }
 }
 ```
+**Day 2: Problem Statement-26/01/25 (Basic OOP)**
+```
+Problem Statement:
+Create a Java program that demonstrates encapsulation by creating a class BankAccount with the following private attributes:    accountNumber, accountHolderName, balance
+Include the following methods:
+Constructor to initialize accountNumber and accountHolderName with user-defined values. Initialize balance to zero.
+Getter and Setter methods for each private attribute.
+A method deposit(double amount) to add the specified amount to the balance.
+A method withdraw(double amount) to subtract the specified amount from the balance (only if sufficient funds are available).
+A method displayAccountDetails() to print the account information.
+Task:   Create an instance of BankAccount, perform some deposits and withdrawals, and display the account details.
+
+Solution:
+class BankAccount {
+    private String accountNumber;
+    private String accountHolderName;
+    private double balance;
+    public BankAccount(String accountNumber, String accountHolderName) {
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.balance = 0.0;
+    }
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+    }
+    public void displayAccountDetails() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Account Holder: " + accountHolderName);
+        System.out.println("Balance: " + balance);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("123456789", "John Doe");
+        account.deposit(1000);
+        account.withdraw(500);
+        account.withdraw(600);
+        System.out.println("\nAccount Details:");
+        account.displayAccountDetails();
+    }
+}
+```
+**Day 3: Problem Statement-27/01/2025 (Basic OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate inheritance by creating the following classes:
+Parent Class: Animal
+Attributes: name
+Methods:
+Constructor to initialize name.
+eat(): Prints a message that the animal is eating.
+Child Class: Dog (inherits from Animal)
+Attributes: breed
+Methods:
+Constructor to initialize name and breed.
+bark(): Prints a message that the dog is barking.
+Task:  Create an instance of the Dog class and demonstrate the use of inherited and child-specific methods.
+
+Solution:
+class Animal {
+    protected String name;
+    public Animal(String name) {
+        this.name = name;
+    }
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+class Dog extends Animal {
+    private String breed;
+    public Dog(String name, String breed) {
+        super(name); // Call the parent class constructor
+        this.breed = breed;
+    }
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Breed: " + breed);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy", "Golden Retriever");
+        dog.displayDetails();
+        dog.eat(); ]
+        dog.bark();
+    }
+}
+```
+**Day 4: Problem Statement-28/01/25 (Basic OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate polymorphism by implementing method overriding.
+Parent Class: Shape
+Method:
+area(): Prints "Calculating area of a shape."
+Child Classes:
+Circle
+Attribute:   radius
+Constructor to initialize radius.
+Override area() to calculate and print the area of a circle (π * radius²).
+Rectangle
+Attributes: length, width
+Constructor to initialize length and width.
+Override area() to calculate and print the area of a rectangle (length * width).
+Task:    Create instances of Circle and Rectangle, call their area() methods, and demonstrate method overriding.
+
+Solution:
+class Shape {
+    public void area() {
+        System.out.println("Calculating area of a shape.");
+    }
+}
+class Circle extends Shape {
+    private double radius;
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+    @Override
+    public void area() {
+        double circleArea = Math.PI * radius * radius;
+        System.out.println("Area of Circle: " + circleArea);
+    }
+}
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    @Override
+    public void area() {
+        double rectangleArea = length * width;
+        System.out.println("Area of Rectangle: " + rectangleArea);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle(5.0);
+        Shape rectangle = new Rectangle(4.0, 6.0);
+        circle.area();
+        rectangle.area();
+    }
+}
+```
