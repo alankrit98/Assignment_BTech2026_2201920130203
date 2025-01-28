@@ -154,3 +154,60 @@ public class Main {
     }
 }
 ```
+**Day 4: Problem Statement-28/01/25 (Basic OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate polymorphism by implementing method overriding.
+Parent Class: Shape
+Method:
+area(): Prints "Calculating area of a shape."
+Child Classes:
+Circle
+Attribute:   radius
+Constructor to initialize radius.
+Override area() to calculate and print the area of a circle (π * radius²).
+Rectangle
+Attributes: length, width
+Constructor to initialize length and width.
+Override area() to calculate and print the area of a rectangle (length * width).
+Task:    Create instances of Circle and Rectangle, call their area() methods, and demonstrate method overriding.
+
+Solution:
+class Shape {
+    public void area() {
+        System.out.println("Calculating area of a shape.");
+    }
+}
+class Circle extends Shape {
+    private double radius;
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+    @Override
+    public void area() {
+        double circleArea = Math.PI * radius * radius;
+        System.out.println("Area of Circle: " + circleArea);
+    }
+}
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    @Override
+    public void area() {
+        double rectangleArea = length * width;
+        System.out.println("Area of Rectangle: " + rectangleArea);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle(5.0);
+        Shape rectangle = new Rectangle(4.0, 6.0);
+        circle.area();
+        rectangle.area();
+    }
+}
+```
