@@ -211,3 +211,63 @@ public class Main {
     }
 }
 ```
+**Day 5: Problem Statement-29/01/25 (Basic OOP)**
+```
+Problem Statement:
+Create a Java program that demonstrates abstraction using the abstract keyword.
+Abstract Class: Vehicle
+Attributes: brand
+Constructor to initialize brand.
+Abstract method startEngine().
+Concrete Classes:
+Car
+Attribute: fuelType
+Constructor to initialize brand and fuelType.
+Implement startEngine() method to print a message specific to cars.
+Bike
+Attribute: hasKickStart
+Constructor to initialize brand and hasKickStart.
+Implement startEngine() method to print a message specific to bikes.
+Task:    Create instances of Car and Bike, call their startEngine() methods, and demonstrate abstraction.
+
+Solution:
+abstract class Vehicle {
+    protected String brand;
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+    abstract void startEngine();
+}
+class Car extends Vehicle {
+    private String fuelType;
+    public Car(String brand, String fuelType) {
+        super(brand);
+        this.fuelType = fuelType;
+    }
+    @Override
+    void startEngine() {
+        System.out.println(brand + " car with " + fuelType + " fuel is starting.");
+    }
+}
+class Bike extends Vehicle {
+    private boolean hasKickStart;
+    public Bike(String brand, boolean hasKickStart) {
+        super(brand);
+        this.hasKickStart = hasKickStart;
+    }
+    @Override
+    void startEngine() {
+        System.out.println(brand + " bike is starting. Kick start available: " + hasKickStart);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Vehicle car = new Car("Toyota", "Petrol");
+        Vehicle bike = new Bike("Yamaha", true);
+
+        car.startEngine();
+        bike.startEngine();
+    }
+}
+
+```
