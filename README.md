@@ -41,7 +41,7 @@ Each day, the following problems are solved and updated in this repository:
 ## **How to Run the Code**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/GAGGZ/Assignment_BTech2026_2201920130203.git
+   git clone https://github.com/alankrit98/Assignment_BTech2026_2201920130203.git
    ```
 2. Open the project in your preferred IDE.
 3. Run the desired `.java` file to test the solution.
