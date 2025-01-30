@@ -264,10 +264,45 @@ public class Main {
     public static void main(String[] args) {
         Vehicle car = new Car("Toyota", "Petrol");
         Vehicle bike = new Bike("Yamaha", true);
-
         car.startEngine();
         bike.startEngine();
     }
 }
+```
+**Day 6: Problem Statement-30/01/25 (Intermediate OOP)**
+```
+Problem Statement:
+Create a Java program that demonstrates interfaces by defining an interface Payment and implementing it in different classes.
+Interface: Payment
+Method:
+void makePayment(double amount)
+Implementing Classes:
+CreditCardPayment- Implements makePayment() to print a message for credit card transactions.
+UPIPayment- Implements makePayment() to print a message for UPI transactions.
+Task:   Create instances of CreditCardPayment and UPIPayment, call makePayment(), and demonstrate interface implementation.
 
+Solution:
+interface Payment {
+    void makePayment(double amount);
+}
+class CreditCardPayment implements Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Paid " + amount + " using Credit Card.");
+    }
+}
+class UPIPayment implements Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Paid " + amount + " using UPI.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Payment creditCard = new CreditCardPayment();
+        Payment upi = new UPIPayment();
+        creditCard.makePayment(1000);
+        upi.makePayment(500);
+    }
+}
 ```
