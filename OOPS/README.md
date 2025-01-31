@@ -306,3 +306,43 @@ public class Main {
     }
 }
 ```
+**Day 7: Problem Statement-31/01/25 (Intermediate OOP)**
+```
+Problem Statement:
+Create a Java program that demonstrates constructor chaining by using both constructors in a class and in a derived class.
+Base Class: Employee
+Attributes: id, name
+Constructor to initialize id and name.
+Derived Class: Manager (inherits from Employee)
+Attribute: department
+Constructor to initialize id, name, and department. It should call the constructor of the Employee class.
+Task:    Create an instance of Manager, initialize its attributes, and print out the information using constructor chaining.
+
+Solution:
+class Employee {
+    protected int id;
+    protected String name;
+    public Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+class Manager extends Employee {
+    private String department;
+    public Manager(int id, String name, String department) {
+        super(id, name);
+        this.department = department;
+    }
+    public void displayDetails() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Manager manager = new Manager(101, "Alice", "HR");
+        manager.displayDetails();
+    }
+}
+```
