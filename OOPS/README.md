@@ -346,3 +346,35 @@ public class Main {
     }
 }
 ```
+**Day 8: Problem Statement-01/02/25 (Intermediate OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate method overloading by defining multiple methods with the same name but different parameters.
+Class: Calculator
+Method:
+add(int a, int b): Returns the sum of two integers.
+add(double a, double b): Returns the sum of two doubles.
+add(int a, int b, int c): Returns the sum of three integers.
+Task:    Create an instance of Calculator, call all overloaded add() methods, and print the results.
+
+Solution:
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public double add(double a, double b) {
+        return a + b;
+    }
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Sum of two integers: " + calc.add(5, 10));
+        System.out.println("Sum of two doubles: " + calc.add(5.5, 2.3));
+        System.out.println("Sum of three integers: " + calc.add(1, 2, 3));
+    }
+}
+```
