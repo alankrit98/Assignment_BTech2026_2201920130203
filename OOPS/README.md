@@ -378,3 +378,53 @@ public class Main {
     }
 }
 ```
+**Day 9: Problem Statement-02/02/25 (Intermediate OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate encapsulation by defining a class with private attributes and public getter and setter methods.
+Class: BankAccount
+Private Attributes:  accountNumber, balance
+Methods:
+Constructor to initialize accountNumber and balance.
+deposit(double amount): Adds the amount to balance.
+withdraw(double amount): Deducts the amount if sufficient balance is available.
+getBalance(): Returns the current balance.
+Task:    Create an instance of BankAccount, perform deposit and withdrawal operations, and display the balance using encapsulation.
+
+Solution:
+class BankAccount {
+    private String accountNumber;
+    private double balance;
+    public BankAccount(String accountNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("123456789", 5000);
+        account.deposit(2000);
+        account.withdraw(1500);
+        System.out.println("Current Balance: " + account.getBalance());
+    }
+}
+```
