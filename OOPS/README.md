@@ -428,3 +428,40 @@ public class Main {
     }
 }
 ```
+**Day 10: Problem Statement-03/02/25 (Intermediate OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate the Singleton Design Pattern, ensuring only one instance of a class is created.
+Class: DatabaseConnection
+Private static instance variable to hold a single instance.
+Private constructor to restrict object creation from outside.
+Public static method getInstance() to return the single instance.
+Method connect() to print a connection message.
+Task:    Create an instance of DatabaseConnection using getInstance() and call the connect() method. Verify that multiple calls return the same instance.
+
+Solution:
+class DatabaseConnection {
+    private static DatabaseConnection instance;
+    private DatabaseConnection() {
+        System.out.println("Database Connection Established.");
+    }
+    public static DatabaseConnection getInstance() {
+        if (instance == null) {
+            instance = new DatabaseConnection();
+        }
+        return instance;
+    }
+    public void connect() {
+        System.out.println("Connected to Database.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        DatabaseConnection db1 = DatabaseConnection.getInstance();
+        db1.connect();
+        DatabaseConnection db2 = DatabaseConnection.getInstance();
+        db2.connect();
+        System.out.println("Are both instances the same? " + (db1 == db2));
+    }
+}
+```
