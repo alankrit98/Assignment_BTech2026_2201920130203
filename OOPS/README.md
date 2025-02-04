@@ -465,3 +465,41 @@ public class Main {
     }
 }
 ```
+**Day 11: Problem Statement-04/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Java Reflection by inspecting the methods and fields of a class dynamically.
+Class: Person
+Private attributes: name, age
+Constructor to initialize attributes.
+Public method displayInfo() to print details.
+Task:    Use Reflection API to get and print all methods and fields of the Person class dynamically at runtime.
+
+Solution:
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+class Person {
+    private String name;
+    private int age;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Class<Person> personClass = Person.class;
+        System.out.println("Methods of Person class:");
+        for (Method method : personClass.getDeclaredMethods()) {
+            System.out.println(method.getName());
+        }
+        System.out.println("\nFields of Person class:");
+        for (Field field : personClass.getDeclaredFields()) {
+            System.out.println(field.getName());
+        }
+    }
+}
+```
