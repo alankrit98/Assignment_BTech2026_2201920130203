@@ -503,3 +503,44 @@ public class Main {
     }
 }
 ```
+**Day 12: Problem Statement-05/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Method Overriding and Runtime Polymorphism using inheritance.
+Base Class: Animal
+Method:
+sound(): Prints a generic message like "Animal makes a sound".
+Derived Classes:
+Dog (inherits Animal)
+Overrides sound() to print "Dog barks".
+Cat (inherits Animal)
+Overrides sound() to print "Cat meows".
+Task:       Create objects of Dog and Cat using runtime polymorphism (i.e., refer them using Animal type). Call sound() method and observe overridden behavior.
+
+Solution:
+class Animal {
+    public void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+}
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Cat meows");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal1 = new Dog();
+        Animal myAnimal2 = new Cat();
+        myAnimal1.sound();
+        myAnimal2.sound();
+    }
+}
+```
