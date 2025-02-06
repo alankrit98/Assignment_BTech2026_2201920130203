@@ -544,3 +544,42 @@ public class Main {
     }
 }
 ```
+**Day 13: Problem Statement-06/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Multiple Inheritance using Interfaces.
+Interfaces:-
+Printable:
+Method: void print()
+Showable:
+Method: void show()
+Class: Document
+Implements both Printable and Showable.
+Provides implementation for print() and show().
+Task:     Create an instance of Document and call both methods.
+
+Solution:
+interface Printable {
+    void print();
+}
+interface Showable {
+    void show();
+}
+class Document implements Printable, Showable {
+    @Override
+    public void print() {
+        System.out.println("Printing the document...");
+    }
+    @Override
+    public void show() {
+        System.out.println("Showing the document...");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Document doc = new Document();
+        doc.print();
+        doc.show();
+    }
+}
+```
