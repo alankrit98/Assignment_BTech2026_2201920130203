@@ -583,3 +583,61 @@ public class Main {
     }
 }
 ```
+**Day 14: Problem Statement-07/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Abstraction using Abstract Classes.
+Abstract Class: Vehicle
+Attributes:  String name
+Abstract Method:
+void start()
+Constructor to initialize name.
+Concrete Method:
+void display() → Prints the vehicle name.
+Derived Classes:
+Car (inherits Vehicle)
+Implements start() to print "Car is starting...".
+Bike (inherits Vehicle)
+Implements start() to print "Bike is starting...".
+Task:     Create instances of Car and Bike. Call start() and display() for each object.
+
+Solution:
+abstract class Vehicle {
+    protected String name;
+    public Vehicle(String name) {
+        this.name = name;
+    }
+    public abstract void start();
+    public void display() {
+        System.out.println("Vehicle: " + name);
+    }
+}
+class Car extends Vehicle {
+    public Car(String name) {
+        super(name);
+    }
+    @Override
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
+class Bike extends Vehicle {
+    public Bike(String name) {
+        super(name);
+    }
+    @Override
+    public void start() {
+        System.out.println("Bike is starting...");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Vehicle car = new Car("Sedan");
+        Vehicle bike = new Bike("Sport Bike");
+        car.display();
+        car.start();
+        bike.display();
+        bike.start();
+    }
+}
+```
