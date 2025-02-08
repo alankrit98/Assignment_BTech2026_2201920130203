@@ -641,3 +641,54 @@ public class Main {
     }
 }
 ```
+**Day 15: Problem Statement-08/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Composition (HAS-A Relationship) by creating a Person class that contains an instance of an Address class.
+Class: Address
+Attributes: street, city, zipcode
+Constructor to initialize attributes.
+Method displayAddress() to print the address details.
+Class: Person
+Attributes: name, age, address
+Constructor to initialize attributes.
+Method displayPersonDetails() to print person details along with address.
+Task:  Create an instance of Person with an Address.  Call displayPersonDetails() to print all details.
+
+Solution:
+class Address {
+    private String street;
+    private String city;
+    private String zipcode;
+    public Address(String street, String city, String zipcode) {
+        this.street = street;
+        this.city = city;
+        this.zipcode = zipcode;
+    }
+    public void displayAddress() {
+        System.out.println("Address: " + street + ", " + city + " - " + zipcode);
+    }
+}
+class Person {
+    private String name;
+    private int age;
+    private Address address;
+    public Person(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    public void displayPersonDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        address.displayAddress();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Address addr = new Address("123 Main St", "New York", "10001");
+        Person person = new Person("John Doe", 30, addr);
+        person.displayPersonDetails();
+    }
+}
+```
