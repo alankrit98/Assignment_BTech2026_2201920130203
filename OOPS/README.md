@@ -692,3 +692,59 @@ public class Main {
     }
 }
 ```
+**Day 16: Problem Statement-09/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Aggregation (Weak Association) by creating a Library class that contains multiple Book objects.
+Class: Book
+Attributes: title, author
+Constructor to initialize attributes.
+Method displayBookDetails() to print book details.
+Class: Library
+Attribute: books (List of Book objects)
+Constructor to initialize the book list.
+Method displayLibraryBooks() to print all books in the library.
+Task:   Create multiple Book objects and add them to a Library instance.  Call displayLibraryBooks() to print all books.
+
+Solution:
+import java.util.ArrayList;
+import java.util.List;
+class Book {
+    private String title;
+    private String author;
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+    public void displayBookDetails() {
+        System.out.println("Title: " + title + ", Author: " + author);
+    }
+}
+class Library {
+    private List<Book> books;
+    public Library() {
+        this.books = new ArrayList<>();
+    }
+    public void addBook(Book book) {
+        books.add(book);
+    }
+    public void displayLibraryBooks() {
+        System.out.println("Library Books:");
+        for (Book book : books) {
+            book.displayBookDetails();
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Book book1 = new Book("The Alchemist", "Paulo Coelho");
+        Book book2 = new Book("1984", "George Orwell");
+        Book book3 = new Book("To Kill a Mockingbird", "Harper Lee");
+        Library library = new Library();
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+        library.displayLibraryBooks();
+    }
+}
+```
