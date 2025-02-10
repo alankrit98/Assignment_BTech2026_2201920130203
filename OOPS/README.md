@@ -748,3 +748,35 @@ public class Main {
     }
 }
 ```
+**Day 17: Problem Statement-10/02/25 (Advanced OOP)**
+```
+Problem Statement:
+Create a Java program to demonstrate Method Overloading (Compile-time Polymorphism) by implementing a Calculator class with multiple versions of the add() method.
+Class: Calculator
+Overloaded methods:
+add(int a, int b): Returns the sum of two integers.
+add(double a, double b): Returns the sum of two doubles.
+add(int a, int b, int c): Returns the sum of three integers.
+Task:   Create an instance of Calculator.  Call each add() method with different parameters and print the results.
+
+Solution:
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public double add(double a, double b) {
+        return a + b;
+    }
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        System.out.println("Sum of 5 and 10: " + calculator.add(5, 10));
+        System.out.println("Sum of 3.5 and 2.5: " + calculator.add(3.5, 2.5));
+        System.out.println("Sum of 1, 2, and 3: " + calculator.add(1, 2, 3));
+    }
+}
+```
